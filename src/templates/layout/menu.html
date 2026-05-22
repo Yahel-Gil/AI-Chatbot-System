@@ -1,0 +1,8 @@
+<nav>
+    <a href="/home?action=new" id="sidebar-new-chat-btn" class="menu-action-btn">
+        <span class="btn-icon">+</span> New Chat
+    </a>
+    
+    <a href="/home" {% if active == "home" %} class="active" {% endif %}>Home</a>
+    <a href="/about" {% if active == "about" %} class="active" {% endif %}>About</a>
+</nav>

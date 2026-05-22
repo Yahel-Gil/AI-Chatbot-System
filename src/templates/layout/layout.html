@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <link rel="stylesheet" href="/static/css/{% block css %}{% endblock css %}">
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+</head>
+<body>
+
+    <div class="layout">
+        <header>
+            {% include "layout/header.html" %}
+        </header>
+        <aside>
+            {% include "layout/menu.html" %}
+        </aside>
+        <main>
+            {% block content %}
+            {% endblock content %}
+        </main>
+        <footer>
+            {% include "layout/footer.html" %}
+        </footer>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% extends "layout/layout.html" %}
+
+{% block title %}
+AI Chat - Home
+{% endblock title %}
+
+{% block css %}home.css{% endblock css %}
+
+{% block content %}
+<div class="chat-container">
+    
+    <div class="chat-welcome" id="chatWelcome">
+        <h2>How can I help you today?</h2>
+        <p>Ask me anything to start a new conversation.</p>
+    </div>
+
+    <div class="chat-messages" id="chatMessages"></div>
+
+    <div class="chat-input-container">
+        <form id="chatForm" onsubmit="event.preventDefault();">
+            <div class="input-wrapper">
+                <textarea id="userInput" placeholder="Message AI Chatbot..." rows="1"></textarea>
+                <button type="submit" id="sendBtn" class="send-button">
+                    <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor"></path>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% endblock content %}

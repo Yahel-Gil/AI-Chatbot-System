@@ -1,0 +1,51 @@
+{% extends "layout/layout.html" %}
+
+{% block title %}
+AI Chat - About
+{% endblock title %}
+
+{% block css %}about.css{% endblock css %}
+
+{% block content %}
+<div class="about-container">
+
+    <section class="about-card">
+        <header class="card-header">
+            <h2>About AI Chatbot System</h2>
+            <p class="subtitle">Project Version 1.0</p>
+        </header>
+        
+        <div class="card-body">
+            <p>
+                Welcome to the AI Chatbot System. This web application delivers an intelligent, 
+                real-time conversational experience powered by advanced language models. The system 
+                features dynamic message streaming, secure session management, and visual analytics.
+            </p>
+        </div>
+    </section>
+
+    <section class="about-card">
+        <header class="card-header">
+            <h2>Technical Architecture</h2>
+        </header>
+        <div class="card-body">
+            <ul class="tech-list">
+                <li><strong>Backend Framework:</strong> Python &amp; Flask</li>
+                <li><strong>Database Layer:</strong> Relational Database Engine with custom DAL Architecture</li>
+                <li><strong>Template Engine:</strong> Jinja2 Architecture with Template Inheritance</li>
+                <li><strong>Frontend Stack:</strong> Vanilla JavaScript, Semantic HTML5, and Modern CSS3</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="about-card developer-card">
+        <header class="card-header">
+            <h2>Developer Profile</h2>
+        </header>
+        <div class="card-body">
+            <p>Developed by <strong>Yahel Gil</strong>, Full Stack Development Student.</p>
+        </div>
+    </section>
+
+</div>
+{% endblock content %}
